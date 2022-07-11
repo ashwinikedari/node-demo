@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const apiPort = 3000;
+const apiPort = process.env.PORT || 3000;
 const routes = require('./routes/routes');
 app.use(bodyParser.urlencoded({ extended: true }))
 
